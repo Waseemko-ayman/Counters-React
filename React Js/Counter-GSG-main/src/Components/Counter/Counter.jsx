@@ -19,9 +19,11 @@ export default class Counter extends React.Component {
   handleDecrement = () => {
     const { value } = this.state;
     const { onDecrement } = this.props;
-    const newValue = value - 1;
-    this.setState({ value: newValue });
-    onDecrement(newValue);
+    if(value > 0) {
+      const newValue = value - 1;
+      this.setState({ value: newValue });
+      onDecrement(newValue);
+    }
   }
 
   render() {

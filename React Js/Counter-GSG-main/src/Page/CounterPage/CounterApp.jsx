@@ -17,9 +17,11 @@ class CounterApp extends React.Component {
   
     handleDecrement = (index) => {
       const { counters } = this.state;
-      const newCounters = [...counters];
-      newCounters[index]--;
-      this.setState({ counters: newCounters });
+      if(counters[index] > 0) {
+        const newCounters = [...counters];
+        newCounters[index]--;
+        this.setState({ counters: newCounters });
+      }
     }
   
     render() {

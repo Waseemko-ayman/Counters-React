@@ -1,0 +1,32 @@
+.counter-box {
+  margin-bottom: 10px;
+}
+
+span {
+  font-size: 35px;
+  margin-right: 20px;
+}
+
+button {
+  max-width: 100%;
+  width: 60px;
+  height: 60px;
+  font-size: 30px;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+button:not(:last-of-type) {
+  margin-right: 10px;
+}
+
+button:first-of-type {
+  background-color: #49c78e;
+}
+
+button:last-of-type {
+  background-color: #f14667;
+}
